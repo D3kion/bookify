@@ -5,8 +5,8 @@
   "module": "src/main.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts",
-    "build": "bun build --compile --external pg --outfile dist/server src/index.ts"
+    "dev": "bun run --watch src/main.ts",
+    "build": "bun build --compile --external pg --outfile dist/server src/main.ts"
   },
   "dependencies": {},
   "devDependencies": {
