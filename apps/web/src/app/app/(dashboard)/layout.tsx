@@ -1,6 +1,7 @@
 "use client";
 
-import { Suspense, useState } from "react";
+import React, { PropsWithChildren, Suspense, useState } from "react";
+import { redirect } from "next/navigation";
 import {
   Calendar,
   Home,
@@ -20,6 +21,7 @@ import {
   HelpCircle,
 } from "lucide-react";
 
+import { authClient } from "@/shared/auth";
 import { Button, Badge, Progress } from "@/shared/ui-kit";
 
 interface SidebarItem {
@@ -31,7 +33,7 @@ interface SidebarItem {
   badge?: string;
 }
 
-export default function DashboardLayout({ children }: { children: React.ReactNode }) {
+export default function DashboardLayout({ children }: PropsWithChildren) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   // const searchParams = useSearchParams()
 
@@ -130,7 +132,10 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                 </Button>
 
                 {/* Profile */}
-                <div className="flex items-center space-x-2">
+                <div
+                  className="flex items-center space-x-2"
+                  onClick={() => authClient.signOut().then(() => redirect("/"))}
+                >
                   <div className="w-8 h-8 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full flex items-center justify-center">
                     <span className="text-white text-sm font-medium">А</span>
                   </div>
