@@ -6,7 +6,7 @@ import { betterAuthCtl } from "./auth";
 
 const app = new Elysia()
   .use(instrumentation)
-  .use(swagger({ scalarCDN: "https://unpkg.com/@scalar/api-reference@latest/dist/browser/standalone.js" }))
+  .use(swagger())
   .get("/health", () => ({ status: "ok" }))
   .mount(betterAuthCtl)
   .listen(4000);

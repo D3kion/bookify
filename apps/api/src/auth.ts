@@ -3,10 +3,10 @@ import { betterAuth } from "better-auth";
 import { openAPI } from "better-auth/plugins";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
 
-import { db } from "./db";
+import { db, schema } from "@bookify/db";
 
 export const auth = betterAuth({
-  database: drizzleAdapter(db, { provider: "sqlite" }),
+  database: drizzleAdapter(db, { provider: "sqlite", schema }),
   plugins: [openAPI({ disableDefaultReference: process.env.NODE_ENV === "production", path: "/swagger" })],
   emailAndPassword: {
     enabled: true,

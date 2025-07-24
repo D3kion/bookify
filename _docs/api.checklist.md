@@ -15,22 +15,24 @@
 
 **Неделя 1: Базис и Workspace (30 часов)**
 
-- [ ] **Инициализация (5ч)**
+- [~] **Инициализация (5ч)**
 
-  - [ ] Установка Bun + TS
-  - [ ] Настройка ESLint/Prettier
-  - [ ] Конфигурация Drizzle ORM
-  - [ ] Миграции для базовых таблиц
+  - [x] Установка Bun + TS
+  - [~] Настройка ESLint/Prettier
+  - [x] Конфигурация Drizzle ORM
+  - [x] Миграции для базовых таблиц
 
-- [ ] **Аутентификация (10ч)**
+- [~] **Аутентификация (10ч)**
 
+  - [x] Better Auth интеграция
+  - [x] Регистрация/логин эндпоинты
   - [ ] Сущность User (id, email, role)
   - [ ] Value Object: Email
-  - [ ] Lucia Auth интеграция
-  - [ ] Регистрация/логин эндпоинты
   - [ ] RBAC (роли: owner, admin, employee)
+  - [ ] Integrate [better-auth-telegram plugin](https://github.com/vitalygashkov/telegram-better-auth/blob/main/src/index.ts)
 
 - [ ] **Workspace (15ч)**
+  - [ ] Интеграция [better-auth/organization](https://www.better-auth.com/docs/plugins/organization)
   - [ ] Сущность Workspace (id, name, address, timezone)
   - [ ] Связь User-Workspace (многие-ко-многим)
   - [ ] Use Case: CreateWorkspace

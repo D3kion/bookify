@@ -2,7 +2,8 @@
   "name": "bookify",
   "private": true,
   "workspaces": [
-    "apps/*"
+    "apps/*",
+    "packages/*"
   ],
   "devDependencies": {
     "@types/bun": "latest"
