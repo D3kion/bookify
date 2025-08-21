@@ -1,4 +1,4 @@
-# zeronin
+# Bookify
 
 To install dependencies:
 
